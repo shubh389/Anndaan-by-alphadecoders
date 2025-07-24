@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/spa/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/spa/index.html"
+    }
+  ],
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "dist/spa/**"
+    }
+  }
+}
