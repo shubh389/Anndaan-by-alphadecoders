@@ -1,15 +1,17 @@
 # Vercel Deployment Guide
 
-This project is ready for deployment on Vercel! 
+This project is ready for deployment on Vercel!
 
 ## Quick Deploy
 
 1. **Install Vercel CLI** (if not already installed):
+
    ```bash
    npm i -g vercel
    ```
 
 2. **Login to Vercel**:
+
    ```bash
    vercel login
    ```
@@ -40,6 +42,7 @@ This project is ready for deployment on Vercel!
 ## Environment Variables
 
 If your app uses environment variables, add them in the Vercel dashboard:
+
 - Go to your project settings
 - Navigate to "Environment Variables"
 - Add your variables for Production/Preview/Development
@@ -47,6 +50,7 @@ If your app uses environment variables, add them in the Vercel dashboard:
 ## Build Process
 
 Vercel will automatically:
+
 1. Run `npm install`
 2. Run `npm run build` (builds both client and server)
 3. Deploy the static files and API functions
